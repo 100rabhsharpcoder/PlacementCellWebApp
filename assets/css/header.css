@@ -1,0 +1,37 @@
+nav{
+    /* display: flex; */
+
+    background-color: rgb(172, 71, 212);
+    border-radius: 0.5rem;
+}
+
+.divheader{
+    display: flex;
+    height: 3rem;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(237, 232, 232);
+    font-weight: 600;
+}
+
+.form{
+    width:50vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+    .cmn a{
+        height: 100%;
+        width: max-content;
+         border-radius: 5px;
+    }
+
+    .cmnn a{
+         border-radius: 5px
+    }

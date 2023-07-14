@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Schedule Interview</title>
+  <link rel="stylesheet" href="/css/allocation.css">
+ 
+</head>
+
+<body>
+  <%- include('_header') %>
+  <div class="container">
+    <form action="/company/schedule-interview" method="post">
+      <h3>Schedule Interview</h3>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <select class="form-select" aria-label="Default select example" name="id" id="name">
+          <option selected disabled>Select Student</option>
+          <% for(let student of students){ %>
+          <option value="<%= student.id %>"><%= student.name %></option>
+          <% } %>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="company" class="form-label">Company</label>
+        <input type="text" class="form-control" id="company" name="company" />
+      </div>
+
+      <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date" name="date" />
+      </div>
+
+      <div class="button-container">
+        <button class="btn btn-success">Schedule Interview</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

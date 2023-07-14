@@ -1,0 +1,13 @@
+Student placement cell Using node Js
+liberary used :"bcrypt""dotenv" "ejs" "express" "express-ejs-layouts" "express-session" "fs" "mongoose" "nodemon" "passport" "passport-local"
+
+for authentication i used passport local startegy
+1st page SignUp
+2nd Page SignIn
+3rd Home Page - here you can find list of student and your name will display in nav bar and form that nav bar you can perform 
+miltiple action like adding student download list of student and reports and schedule and update inter view 
+
+in this web app you can perform all CRUD Opearation 
+
+Author: saurabh gathade
+email: saurabhgathade@gmail.com

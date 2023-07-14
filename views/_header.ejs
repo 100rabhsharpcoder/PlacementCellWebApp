@@ -1,0 +1,30 @@
+<header>
+    <link rel="stylesheet" href="/css/header.css">
+	<% if (locals.user) { %>
+	<nav>
+		<div  class="divheader" >
+			<a href="/">Placement Cell</a>
+			<a href="/">Welcome <%=locals.user.name%></a>
+			<form>
+                <div class="form">
+
+                    <div class="cmn">
+                        <a href="/company/home">Company List</a>
+                    </div>
+                    <div class="cmn">
+                        <a href="/users/download-csv">Download Report</a>
+                    </div>
+
+                    <div class="cmnn">
+                        <a href="/users/signout"  style="color: rgb(72, 7, 76);">Sign out</a>
+                    </div>
+
+				
+				
+			
+            </div>
+			</form>
+		</div>
+	</nav>
+	<% } %>
+</header>

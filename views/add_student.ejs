@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Create Student Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #e6e9e9;
+		}
+
+		.container {
+			width: 50%;
+			margin: 50px auto;
+			padding: 50px 70px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+		}
+
+		h3 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		label {
+			font-weight: bold;
+		}
+
+		.form-control {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-bottom: 10px;
+		}
+
+		.form-select {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-bottom: 10px;
+		}
+
+		.form-select option {
+			padding: 5px;
+		}
+
+		.button-container {
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+		}
+
+		.btn {
+			display: inline-block;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			background-color: #28a745;
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			padding: 10px 20px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.btn:hover {
+			background-color: #218838;
+		}
+	</style>
+</head>
+
+<body>
+	<%- include('_header') %>
+	<div class="container">
+		<form action="/students/create-student" method="post">
+			<h3>Add Student</h3>
+			<fieldset>
+				<label for="batch">Batch</label>
+				<input type="text" class="form-control" id="batch" name="batch" />
+			</fieldset>
+
+			<fieldset>
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" name="name" />
+			</fieldset>
+
+			<fieldset>
+				<label for="email">Email address</label>
+				<input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" />
+			</fieldset>
+
+			<fieldset>
+				<label for="contactNumber">Mobile Number</label>
+				<input type="text" class="form-control" id="contactNumber" name="contactNumber" />
+			</fieldset>
+
+			<fieldset>
+				<label for="college">College Name</label>
+				<input type="text" class="form-control" id="college" name="college" />
+			</fieldset>
+
+			<fieldset>
+				<label for="placement">Placement Status</label>
+				<select class="form-select" aria-label="Default select example" name="placement" id="placement">
+					<option value="Placed">Placed</option>
+					<option value="Not Placed">Not Placed</option>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<div style="display: flex; justify-content: space-between">
+					<div style="flex: 1; margin-right: 5px;">
+						<label for="dsa">DSA</label>
+						<input type="text" class="form-control" id="dsa" name="dsa" />
+					</div>
+					<div style="flex: 1; margin-left: 5px; margin-right: 5px;">
+						<label for="webd">Web Development</label>
+						<input type="text" class="form-control" id="webd" name="webd" />
+					</div>
+					<div style="flex: 1; margin-left: 5px;">
+						<label for="react">React</label>
+						<input type="text" class="form-control" id="react" name="react" />
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="button-container">
+				<button type="submit" class="btn">Create Student</button>
+			</div>
+		</form>
+	</div>
+
+</body>
+
+</html>

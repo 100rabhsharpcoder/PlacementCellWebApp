@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/css/home.css">
+ 
+  <title>Home</title>
+</head>
+
+<body>
+  <%- include('_header') %>
+  <div class="container">
+    <div class="header">
+      <div class="col-6">
+        <h2>List of Students:</h2>
+      </div>
+      <div class="add-button">
+        <a style="color: #0c0c0c;" href="/students/create" class="btn btn-success">+ Add Student</a>
+      </div>
+    </div>
+    <% if(students.length > 0) { %>
+    <div class="mt-3 mb-3">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Batch</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact</th>
+            <th scope="col">DSA</th>
+            <th scope="col">WEB</th>
+            <th scope="col">REACT</th>
+            <th scope="col">Interview</th>
+            <th scope="col" class="text-end">Action</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <% for(let student of students) { %>
+          <tr>
+            <td><%= student.batch %></td>
+            <td><%= student.name %></td>
+            <td><%= student.email %></td>
+            <td><%= student.contactNumber %></td>
+            <td><%= student.dsa %></td>
+            <td><%= student.webd %></td>
+            <td><%= student.react %></td>
+            <td>
+              <% if(student.interviews.length) { %>
+              <% for(let company of student.interviews) { %>
+              <a style="color: #343a40;" href="#" id="compnay_name"><%= company.company %></a>
+              <% } %>
+              <% } else { %>
+              NONE
+              <% } %>
+            </td>
+            <td class="text-end">
+              <a href="/students/delete/<%= student.id %>" class="delete-button">Delete</a>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+    <div class="w-75 mx-auto mt-5">
+      <h2>No Records Found</h2>
+    </div>
+    <% } %>
+  </div>
+</body>
+
+</html>
