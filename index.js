@@ -1,5 +1,5 @@
 const express = require('express');
-const Port= 4000;
+const Port= 3000;
 const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
